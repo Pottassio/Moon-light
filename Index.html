@@ -1,0 +1,89 @@
+# Moon-light
+Interface criada por meio de um vídeo do canal "Online Tutorials" Utilizando html, css e um pouco de javascript.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./projeto3.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,200;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Moon</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"> Logo </a>
+      <ul>
+        <li><a class="activate" href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Work</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="./img/stars.png" alt="" id="stars" />
+      <img src="./img/moon.png" alt="" id="moon" />
+      <img src="./img/mountains_behind.png" alt="" id="mountains_behind" />
+      <h2 id="text">Moon Light</h2>
+      <a href="#sec" id="btn">Explore</a>
+      <img src="./img/mountains_front.png" alt="" id="mountains_front" />
+    </section>
+    <div class="sec" id="sec">
+      <h2>Parallax Scrolling Effects</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+        deserunt maxime accusamus autem unde facere excepturi dolores sapiente
+        quae recusandae laborum pariatur aliquid totam modi, labore dolorem qui!
+        Blanditiis, culpa. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Quia inventore perspiciatis neque animi delectus impedit est.
+        Alias, odit necessitatibus error rem a mollitia beatae impedit pariatur
+        quae nulla eligendi ipsa? Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Vero, repellat tenetur quo eligendi aperiam nihil
+        asperiores harum omnis dicta vitae sint nemo necessitatibus ut labore
+        quod quia et molestiae! At. <br />
+        <br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+        deserunt maxime accusamus autem unde facere excepturi dolores sapiente
+        quae recusandae laborum pariatur aliquid totam modi, labore dolorem qui!
+        Blanditiis, culpa Alias, odit necessitatibus error rem a mollitia beatae
+        impedit pariatur quae nulla eligendi ipsa? Lorem ipsum dolor sit amet
+        consectetur adipisicing elit.
+        <br />
+        <br />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia inventore
+        perspiciatis neque animi delectus impedit est. Alias, odit
+        necessitatibus error rem a mollitia beatae impedit pariatur quae nulla
+        eligendi ipsa? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Vero, repellat tenetur quo eligendi aperiam nihil asperiores harum omnis
+        dicta vitae sint nemo necessitatibus ut labore quod quia et molestiae!
+        At. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+        deserunt maxime accusamus autem unde facere excepturi dolores sapiente
+        quae recusandae laborum pariatur aliquid totam modi, labore dolorem qui!
+        Blanditiis, culpa Alias, odit necessitatibus error rem a mollitia beatae
+        impedit pariatur quae nulla eligendi ipsa? Lorem ipsum dolor sit amet
+        consectetur adipisicing elit.
+      </p>
+    </div>
+    <script>
+      let stars = document.getElementById("stars");
+      let moon = document.getElementById("moon");
+      let moutains_behind = document.getElementById("moutains_behind");
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
+      let moutains_front = document.getElementById("moutains_front");
+      let sec = document.getElementById("sec");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + "px";
+        moon.style.top = value * 1.05 + "px";
+        mountains_behind.style.top = value * 0.5 + "px";
+        moutains_front.style.top = value * 0 + "px";
+      });
+    </script>
+  </body>
+</html>
